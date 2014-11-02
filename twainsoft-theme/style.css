@@ -1,0 +1,129 @@
+/*
+
+Theme Name: Twainsoft Theme
+Description: Das Twainsoft-Theme für fabiandeitelhoff.de.
+Author: Fabian Deitelhoff
+Author URI: http://www.fabiandeitelhoff.de
+Version: 0.0.1
+Template: suevafree
+Tags: 
+License: ---
+License URI: ---
+
+*/
+
+@import url("../suevafree/style.css");
+
+#logo,
+#logo a span,
+nav#mainmenu {
+	text-align:left;
+}
+
+nav#mainmenu ul li a {
+	margin:15px 30px 15px 0;
+}
+
+nav#mainmenu ul ul {
+	left:0;
+}
+
+nav#mainmenu ul li {
+	height: 50px;
+}
+
+#sidebar .widget-box {
+	padding:20px;
+}
+
+.pin-article h1.title {
+	text-align:left;
+}
+
+.line {
+	text-align:left;
+}
+
+.entry-info {
+	margin: -12px 0 0 0;
+	text-align:left;
+	padding:0 10px 0 0;
+}
+
+.pin-container:after {
+	left: 45px;
+	margin-left: 0;
+}
+
+.entry-info .entry-date i {
+	margin-left:0;
+}
+
+.button,
+.contact-form input[type=submit] {
+	margin-left:0;
+	margin-right:0;
+}
+
+.span4 .entry-info .entry-date, 
+.span4 .entry-info .entry-comments,
+.span4 .entry-info .entry-audio, 
+.span4 .entry-info .entry-video,
+.span4 .entry-info .entry-standard,
+.span4 .entry-info .entry-gallery{
+	text-align: left;
+}
+
+.span4 .entry-info i  {
+	left:inherit;
+	right: 0;
+}
+
+.wp-pagenavi {
+	text-align: left;
+	margin-top:25px;
+}
+
+@media screen and (min-width : 0px) and (max-width : 768px)  {	
+
+	.pin-container:after {
+		left: 20px;
+	}
+	
+	.entry-info .entry-date, 
+	.entry-info .entry-comments,
+	.entry-info .entry-audio, 
+	.entry-info .entry-video,
+	.entry-info .entry-standard,
+	.entry-info .entry-article,
+	.entry-info .entry-gallery {
+		text-align:left;
+	}
+	
+	.entry-info i  {
+		left: inherit;
+		right:0;
+	}
+
+	#sidebar .sidebar-box {
+		padding:0;
+	}
+	
+	.row.copyright .span5, 
+	.row.copyright .span7{
+		text-align: left;
+	}
+
+	#footer .copyright {
+		padding: 20px;
+	}
+	
+	.wp-pagenavi {
+		margin:0 auto;
+	}
+	
+	.span8 .wp-pagenavi {
+		margin-bottom:20px;
+	}
+	
+}
