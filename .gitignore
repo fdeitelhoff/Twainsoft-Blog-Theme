@@ -1,4 +1,5 @@
 # Ignore all files except the directories "suevafree" (main theme) and "twainsoft-theme" (adjusted theme).
-*.*
-!/suevafree/*.*
-!/twainsoft-theme/*.*
+/*
+/*/
+!/suevafree/
+!/twainsoft-theme/
