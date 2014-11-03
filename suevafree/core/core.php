@@ -197,7 +197,7 @@ function suevafree_enqueue_scripts_styles() {
 	//wp_enqueue_style( "prettyPhoto", get_template_directory_uri()."/css/prettyPhoto.css");
 	wp_enqueue_script( 'jquery.tipsy', get_template_directory_uri().'/js/jquery.tipsy.js',array('jquery'),"1.0.0",TRUE  ); 
 	wp_enqueue_script( 'jquery.mobilemenu', get_template_directory_uri().'/js/jquery.mobilemenu.js',array('jquery'),"1.0.0",TRUE );
-	//wp_enqueue_script( 'jquery.prettyPhoto', get_template_directory_uri().'/js/jquery.prettyPhoto.js',array('jquery'),"1.0.0",TRUE ); 
+	wp_enqueue_script( 'jquery.prettyPhoto', get_template_directory_uri().'/js/jquery.prettyPhoto.js',array('jquery'),"1.0.0",TRUE ); 
 	wp_enqueue_script( 'jquery.custom', get_template_directory_uri().'/js/jquery.custom.js',array('jquery') ,"1.0.0",TRUE); 
 	wp_enqueue_script( 'comment-reply' );
 	

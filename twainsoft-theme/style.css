@@ -127,3 +127,17 @@ nav#mainmenu ul li {
 	}
 	
 }
+
+/* Some Special Adjustments for Plugins or stuff like this */
+
+.yarpp-related  ol li {
+	font-size: 16px;
+}
+
+h3.comments {
+	margin: 10px;
+}
+
+.comment-text p {
+	font-size: 18px !important;
+}

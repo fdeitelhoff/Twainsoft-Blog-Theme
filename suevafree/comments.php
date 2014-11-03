@@ -8,7 +8,7 @@ if ( have_comments() ) :
 
 <section id="comments">
 	<ul class="commentlist">
-		<?php wp_list_comments('type=comment&callback=suevafree_comment'); ?>
+		<?php wp_list_comments('type=all&callback=suevafree_comment'); ?>
 	</ul>
 </section>
 
@@ -16,7 +16,21 @@ if ( have_comments() ) :
 
 <?php 
 function suevafree_comment ($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+		// Display trackbacks differently than normal comments.
+	?>
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+		<p><?php _e( 'Pingback:', 'twentytwelve' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+			break;
+		default :
+		// Proceed with normal comments.
+		global $post;
+	?>
+   
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
  
  <article id="comment-<?php comment_ID(); ?>" class="comment-container">
@@ -48,6 +62,11 @@ function suevafree_comment ($comment, $args, $depth) {
  	<div class="clear"></div>
     
 </article>
+
+	<?php
+		break;
+	endswitch; // end comment_type check
+	?>
 
 <?php } ?>
 
