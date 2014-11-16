@@ -49,3 +49,9 @@ add_action( 'genesis_footer', 'twainsoft_do_footer' );
 function twainsoft_do_footer() {
 	echo 'Copyright &copy; ' . get_bloginfo("name") . ' 2012 - ' . date("Y") . ' | Theme based upon the <a href="http://my.studiopress.com/themes/genesis/" title="Studiopress Genesis Framework">Genesis Framework</a>.';
 }
+
+// Add an own reading more filter without the jumping functionality.
+function twainsoft_read_more_without_jumping($post) {
+     return '<p><a href="'.get_permalink($post->ID).'" class="read-more">'. __( '[Read more...]', 'genesis' ) .'</a></p>';
+}
+add_filter('excerpt_more', 'twainsoft_read_more_without_jumping');
