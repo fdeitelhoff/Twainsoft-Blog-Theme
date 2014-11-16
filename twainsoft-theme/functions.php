@@ -35,7 +35,17 @@ add_theme_support( 'genesis-footer-widgets', 3 );
  ************************************************************************
  */
 
+// Add the specific filter to change the language to German.
 add_action( 'after_setup_theme', 'twainsoft_child_theme_setup' );
 function twainsoft_child_theme_setup() {
     load_child_theme_textdomain( 'genesis', get_stylesheet_directory() . '/languages' );
+}
+
+// Remove the original Genesis footer first. I want my own footer.
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+
+// And this add my own footer as an action.
+add_action( 'genesis_footer', 'twainsoft_do_footer' );
+function twainsoft_do_footer() {
+	echo 'Copyright &copy; ' . get_bloginfo("name") . ' 2012 - ' . date("Y") . ' | Theme based upon the <a href="http://my.studiopress.com/themes/genesis/" title="Studiopress Genesis Framework">Genesis Framework</a>.';
 }
