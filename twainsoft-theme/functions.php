@@ -1,63 +1,41 @@
 <?php
+//* Start the engine
+include_once( get_template_directory() . '/lib/init.php' );
 
+//* Child theme (do not remove)
+define( 'CHILD_THEME_NAME', 'Genesis Sample Theme' );
+define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
+define( 'CHILD_THEME_VERSION', '2.1.2' );
 
-function polarlite_widgets_init() {
+//* Enqueue Google Fonts
+add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
+function genesis_sample_google_fonts() {
 
-	unregister_sidebar( 'sidebar-area' );
-	unregister_sidebar( 'home_sidebar_area' );
-	unregister_sidebar( 'category-sidebar-area' );
-	unregister_sidebar( 'bottom-sidebar-area' );
-
-	register_sidebar(array(
-	
-		'name' => 'Sidebar',
-		'id'   => 'sidebar-area',
-		'description'   => 'This sidebar will be shown after the contents.',
-		'before_widget' => '<div class="pin-article span4"><div class="widget-box">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h3 class="title">',
-		'after_title'   => '</h3>'
-	
-	));
-	
-	register_sidebar(array(
-	
-		'name' => 'Home Sidebar',
-		'id'   => 'home_sidebar_area',
-		'description'   => __( "This sidebar will be shown for the homepage","wip"),
-		'before_widget' => '<div class="pin-article span4"><div class="widget-box">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h3 class="title">',
-		'after_title'   => '</h3>'
-	
-	));
-
-	register_sidebar(array(
-	
-		'name' => 'Category Sidebar',
-		'id'   => 'category-sidebar-area',
-		'description'   => 'This sidebar will be shown after the content.',
-		'before_widget' => '<div class="pin-article span4"><div class="widget-box">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h3 class="title">',
-		'after_title'   => '</h3>'
-	
-	));
-
-	register_sidebar(array(
-	
-		'name' => 'Bottom Sidebar',
-		'id'   => 'bottom-sidebar-area',
-		'description'   => 'This sidebar will be shown after the content.',
-		'before_widget' => '<div class="span3"><div class="widget-box">',
-		'after_widget'  => '</div></div>',
-		'before_title'  => '<h4 class="title">',
-		'after_title'   => '</h4>'
-	
-	));
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
 
 }
 
-add_action( 'widgets_init', 'polarlite_widgets_init' , 11);
+//* Add HTML5 markup structure
+add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
-?>
+//* Add viewport meta tag for mobile browsers
+add_theme_support( 'genesis-responsive-viewport' );
+
+//* Add support for custom background
+add_theme_support( 'custom-background' );
+
+//* Add support for 3-column footer widgets
+add_theme_support( 'genesis-footer-widgets', 3 );
+
+
+/************************************************************************
+ *
+ * Some special adjustments for the Twainsoft Blog Theme.
+ *
+ ************************************************************************
+ */
+
+add_action( 'after_setup_theme', 'twainsoft_child_theme_setup' );
+function twainsoft_child_theme_setup() {
+    load_child_theme_textdomain( 'genesis', get_stylesheet_directory() . '/languages' );
+}
