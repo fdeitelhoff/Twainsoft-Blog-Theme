@@ -14,3 +14,22 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import url("../genesis/style.css");
+
+.nav-primary {
+	background-color: #333;
+	border-top: 4px solid #0090ff;
+	border-bottom: 4px solid #0090ff;
+}
+
+.footer-widgets {
+	background-color: #333;
+	clear: both;
+	padding-top: 40px;
+	border-top: 4px solid #0090ff;
+	border-bottom: 4px solid #0090ff;
+}
+
+a {
+	color: #0090ff;
+	text-decoration: none;
+}
