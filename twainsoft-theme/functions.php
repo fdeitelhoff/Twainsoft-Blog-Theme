@@ -51,7 +51,7 @@ function twainsoft_do_footer() {
 }
 
 // Add an own reading more filter without the jumping functionality.
-add_filter('excerpt_more', 'twainsoft_read_more_without_jumping');
+add_filter('the_content_more_link', 'twainsoft_read_more_without_jumping');
 function twainsoft_read_more_without_jumping($post) {
      return '<p><a href="'.get_permalink($post->ID).'" class="read-more">'. __( '[Read more...]', 'genesis' ) .'</a></p>';
 }
