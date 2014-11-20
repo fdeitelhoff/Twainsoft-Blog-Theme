@@ -15,6 +15,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @import url("../genesis/style.css");
 
+/*
+ *
+ * Some colour adjustments for the menu, footer and all links in the main content.
+ *
+*/
 .nav-primary {
 	background-color: #333;
 	border-top: 4px solid #0090ff;
@@ -32,4 +37,55 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 a {
 	color: #0090ff;
 	text-decoration: none;
+}
+
+/*
+ *
+ * Some more adjustments.
+ *
+*/
+blockquote {
+   font-style: italic;
+   margin: 0.25em 0;
+   padding: 0.25em 40px;
+   position: relative;
+   color: #383838;
+   border-left: 3px solid #C00000;
+   background: #eee;
+}
+
+blockquote cite {
+   color: #999999;
+   display: block;
+   margin-top: 5px;
+}
+ 
+blockquote cite:before {
+   content: "\2014 \2009";
+}
+
+#wp-calendar a {
+   color: #e5554e;
+}
+
+.entry-content pre,
+.comment-content pre {
+   background: #f3f3f3;
+   border: 1px dashed #cccccc;
+   border-color: #C00000;
+   color: #4f70c5;
+}
+
+.info-box {
+   margin: 0.25em 0;
+   padding: 20px;
+   position: relative;
+   color: #383838;
+   border: 1px dashed;
+   background: #eee;
+}
+
+.info-box {
+   border-color: #00529B;
+   border-left: 4px solid #00529B;
 }

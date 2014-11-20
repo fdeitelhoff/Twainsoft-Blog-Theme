@@ -22,7 +22,7 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom background
-add_theme_support( 'custom-background' );
+//add_theme_support( 'custom-background' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
@@ -51,7 +51,16 @@ function twainsoft_do_footer() {
 }
 
 // Add an own reading more filter without the jumping functionality.
+add_filter('excerpt_more', 'twainsoft_read_more_without_jumping');
 function twainsoft_read_more_without_jumping($post) {
      return '<p><a href="'.get_permalink($post->ID).'" class="read-more">'. __( '[Read more...]', 'genesis' ) .'</a></p>';
 }
-add_filter('excerpt_more', 'twainsoft_read_more_without_jumping');
+
+// Change the separator and the label for the breadcrumb.
+add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
+function sp_breadcrumb_args( $args ) {
+	$args['sep'] = ' &raquo; ';
+	$args['labels']['prefix'] = '&raquo; ';
+
+	return $args;
+}
