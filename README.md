@@ -1,4 +1,4 @@
-Twainsoft-Blog-Themes
+Twainsoft.Blog.Themes
 =====================
 
 All current and old themes for the blog http://www.fabiandeitelhoff.de. Based upon some other themes and Wordpress.
