@@ -128,3 +128,12 @@ blockquote cite:before {
 	background-color: #e5554e;
 	color: #fff;
 }
+
+/*
+ *
+ * Change the avatar image so that it will align with the text (experimental).
+ *
+ */
+.photo {
+    margin-top: 8px;
+}

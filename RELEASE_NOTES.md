@@ -3,6 +3,7 @@
 * Added fontawesome icons.
 * Added this RELEASE_NOTES file.
 * Added an input button like styled link for the 'Read next...' hyper link.
+* Change the avatar image margin so that it will align with the text (experimental).
 
 #### 0.0.5-beta - November 20 2014
 * New 'Read more...' link without the jump.
