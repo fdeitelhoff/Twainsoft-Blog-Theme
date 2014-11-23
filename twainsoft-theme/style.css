@@ -106,3 +106,19 @@ blockquote cite:before {
 .entry-reading-data {
    font-size: 16px;
 }
+.read-more-button {
+   background-color: #0090ff;
+   border: none;
+   color: #fff;
+   cursor: pointer;
+   font-size: 16px;   
+   padding: 12px;
+   text-transform: uppercase;
+   width: auto;
+   text-decoration: none;
+}
+
+.read-more-button:hover {
+	background-color: #e5554e;
+	color: #fff;
+}

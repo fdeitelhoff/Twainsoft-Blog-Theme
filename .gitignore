@@ -1,5 +1,6 @@
 # Ignore all files except the directories "suevafree" (main theme) and "twainsoft-theme" (adjusted theme).
 /*
 /*/
+!RELEASE_NOTES.md
 !/twainsoft-theme/
 !/twainsoft-twentytwelve/

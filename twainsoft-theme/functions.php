@@ -51,7 +51,7 @@ function twainsoft_do_footer() {
 // Add an own reading more filter without the jumping functionality.
 add_filter('the_content_more_link', 'twainsoft_read_more_without_jumping');
 function twainsoft_read_more_without_jumping($post) {
-     return '<p><a href="'.get_permalink($post->ID).'" class="read-more">'. __( '[Read more...]', 'genesis' ) .'</a></p>';
+     return '<p><a href="'.get_permalink($post->ID).'" class="read-more-button">'. __( 'Read more...', 'genesis' ) .'</a></p>';
 }
 
 // Change the separator and the label for the breadcrumb.
@@ -91,7 +91,7 @@ remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 add_action( 'genesis_entry_header', 'sp_genesis_entry_header' );
 add_action( 'genesis_entry_header', 'genesis_do_post_title' );
 function sp_genesis_entry_header() {
-    echo sprintf ('<p class="entry-reading-data"><i class="fa fa-clock-o"></i> %1$s, %2$s W&ouml;rter %3$s %4$s</p>', post_read_time(), sp_post_word_count(), genesis_post_comments_shortcode(''), genesis_post_edit_shortcode('') );
+    echo sprintf ('<p class="entry-reading-data"><i class="fa fa-clock-o"></i> %1$s, %2$s ' . __( 'Words', 'genesis' ) . ' %3$s %4$s</p>', post_read_time(), sp_post_word_count(), genesis_post_comments_shortcode(''), genesis_post_edit_shortcode('') );
 }
 
 // Shortcode for the word count of a post.
