@@ -1,15 +1,15 @@
 /* 
 
 Theme Name: Twainsoft Blog Theme
-Theme URI: http://my.studiopress.com/themes/genesis/  
-Description: This is the sample theme created for the Genesis Framework.   
-Author: StudioPress  
-Author URI: http://www.studiopress.com/  
+Theme URI: http://www.fabiandeitelhoff.de
+Description: This is the Twainsoft Blog Theme based upon the Genesis Framework.
+Author: Fabian Deitelhoff - Twainsoft
+Author URI: http://www.fabiandeitelhoff.de  
 Template: genesis  
 Template Version: 2.1.2  
 Tags: black, orange, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-menu, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
-License: GPL-2.0+  
-License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+License: MIT
+License URI: http://opensource.org/licenses/MIT
 
 */
 
@@ -43,7 +43,7 @@ a {
  *
  * Some more adjustments.
  *
-*/
+ */
 blockquote {
    font-style: italic;
    margin: 0.25em 0;
@@ -85,7 +85,24 @@ blockquote cite:before {
    background: #eee;
 }
 
+/*
+ *
+ * Styles for the post info.
+ *
+ */
+.fa {
+	padding-right: 2px;
+}
+
 .info-box {
    border-color: #00529B;
    border-left: 4px solid #00529B;
+}
+
+.entry-time, .entry-edit-time {
+   padding-right: 20px;
+}
+
+.entry-reading-data {
+   font-size: 16px;
 }
